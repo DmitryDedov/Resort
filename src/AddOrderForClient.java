@@ -5,10 +5,13 @@ import java.sql.*;
 
 public class AddOrderForClient extends JFrame
 {
+    int id_order = 0;
+    int id_client = 0;
     String[] arrayOrderType = new String[20];
-    AddOrderForClient()
+    AddOrderForClient(int id_client_allien)
     {
         super("Add order");
+        id_client = id_client_allien;
         AddComponentsOnForm();
     }
 
@@ -23,12 +26,12 @@ public class AddOrderForClient extends JFrame
         jLabelOrderType.setLocation(20, 50);
         jpanel.add(jLabelOrderType);
 
-        JComboBox jComboBoxType = new JComboBox();
-        jComboBoxType.setSize(100, 20);
-        jComboBoxType.setLocation(150, 50);
-        jComboBoxType.addItem("Food");
-        jComboBoxType.addItem("Drink");
-        jpanel.add(jComboBoxType);
+        final JComboBox jComboBoxOrderType = new JComboBox();
+        jComboBoxOrderType.setSize(100, 20);
+        jComboBoxOrderType.setLocation(150, 50);
+        jComboBoxOrderType.addItem("Food");
+        jComboBoxOrderType.addItem("Drink");
+        jpanel.add(jComboBoxOrderType);
 
         JLabel jLabelOrderName = new JLabel("Name:");
         jLabelOrderName.setSize(100, 20);
@@ -45,7 +48,7 @@ public class AddOrderForClient extends JFrame
         jLabelOrderDate.setLocation(20, 130);
         jpanel.add(jLabelOrderDate);
 
-        JTextField jTextFieldOrderDate = new JTextField();
+        final JTextField jTextFieldOrderDate = new JTextField();
         jTextFieldOrderDate.setSize(100, 20);
         jTextFieldOrderDate.setLocation(150, 130);
         jpanel.add(jTextFieldOrderDate);
@@ -55,7 +58,7 @@ public class AddOrderForClient extends JFrame
         jLabelOrderTime.setLocation(20, 170);
         jpanel.add(jLabelOrderTime);
 
-        JTextField jTextFieldOrderTime = new JTextField();
+        final JTextField jTextFieldOrderTime = new JTextField();
         jTextFieldOrderTime.setSize(100, 20);
         jTextFieldOrderTime.setLocation(150, 170);
         jpanel.add(jTextFieldOrderTime);
@@ -65,7 +68,7 @@ public class AddOrderForClient extends JFrame
         jLabelOrderCount.setLocation(20, 210);
         jpanel.add(jLabelOrderCount);
 
-        JComboBox jComboBoxOrderCount = new JComboBox();
+        final JComboBox jComboBoxOrderCount = new JComboBox();
         jComboBoxOrderCount.setSize(100, 20);
         jComboBoxOrderCount.setLocation(150, 210);
         jComboBoxOrderCount.addItem(1);
@@ -85,19 +88,21 @@ public class AddOrderForClient extends JFrame
                 JComboBox box = (JComboBox)e.getSource();
                 String type = (String)box.getSelectedItem();
                 SelectOrderFromTable(type);
+                jComboBoxOrderName.removeAllItems();
                 FillOrderName(jComboBoxOrderName);
             }
         };
-        jComboBoxType.addActionListener(actionListener);
+        jComboBoxOrderType.addActionListener(actionListener);
 
-//        jButtonAdd.addActionListener(new ActionListener()
-//        {
-//            public void actionPerformed(ActionEvent e)
-//            {
-//                AddOrderOnBD(jTextFieldEventName.getText(), jTextFieldEventPlace.getText());
-//                dispose();
-//            }
-//        });
+        jButtonAdd.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                GetIdOrder(jComboBoxOrderType.getSelectedItem().toString(), jComboBoxOrderName.getSelectedItem().toString());
+                AddOrderOnBD(jTextFieldOrderDate.getText(), jTextFieldOrderTime.getText(), jComboBoxOrderCount.getSelectedItem().toString());
+                dispose();
+            }
+        });
 
         setContentPane(jpanel);
         setSize(300, 600);
@@ -116,7 +121,7 @@ public class AddOrderForClient extends JFrame
 
             ResultSet resultSet = statement.executeQuery("select ord_name from orders where type = '" + type + "'");
             int index = 0;
-            if (resultSet.next())
+            while (resultSet.next())
             {
                 arrayOrderType[index] = resultSet.getString("ord_name");
                 index++;
@@ -138,13 +143,33 @@ public class AddOrderForClient extends JFrame
         }
     }
 
-    void AddOrderOnBD(String name, String type)
+    void GetIdOrder(String type, String name)
     {
         try
         {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
             Statement statement = connection.createStatement();
-            statement.executeUpdate("insert into orders (ord_name, type) values ('" + name + "', '" + type + "')");
+
+            ResultSet resultSet = statement.executeQuery("select id_order from orders where type = '" + type + "' and ord_name = '" + name + "'");
+            if (resultSet.next())
+            {
+                id_order = resultSet.getInt("id_order");
+            }
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    void AddOrderOnBD(String date, String time, String count)
+    {
+        try
+        {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("insert into client_order (id_order, id_client, date, time, count, status) values (" + id_order + ", " +
+                    id_client + ",'" + date + "', '" + time + "', '" + count + "', 0)");
         }
         catch (SQLException e)
         {

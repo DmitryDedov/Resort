@@ -6,9 +6,11 @@ import java.awt.event.ActionListener;
 public class MainClient extends JFrame
 {
     Weather weather = new Weather();
-    MainClient()
+    int id_client = 0;
+    MainClient(int id_client_allien)
     {
         super("Client");
+        id_client = id_client_allien;
         weather.GetWeather();
         AddComponentOnForm();
     }
@@ -121,7 +123,7 @@ public class MainClient extends JFrame
         {
             public void actionPerformed(ActionEvent e)
             {
-                JFrame windowAddOrder = new AddOrderForClient();
+                JFrame windowAddOrder = new AddOrderForClient(id_client);
                 windowAddOrder.setVisible(true);
             }
         });

@@ -4,7 +4,7 @@
     <list default="true" id="4add0879-5a10-460a-a77f-d0287474572e" name="Default" comment="" />
     <ignored path="Resort.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Program.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387470687363" ignored="false" />
+    <file path="/Program.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387486312098" ignored="false" />
     <file path="/fragment.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387474976401" ignored="false" />
     <file path="/Registration.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385924111575" ignored="false" />
     <file path="/MainModerator.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387111638100" ignored="false" />
@@ -15,8 +15,8 @@
     <file path="/ClientTest.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385662984879" ignored="false" />
     <file path="/Dummy.txt" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385480222290" ignored="false" />
     <file path="$PROJECT_DIR$/../Server for resort manager/WebService/src/resortmanager/webservice/dal/ConnectionSingleton.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385479435621" ignored="false" />
-    <file path="$PROJECT_DIR$/../Server for resort manager/WebService/src/resortmanager/webservice/service/handlers/ClientsHandler.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387470489494" ignored="false" />
-    <file path="/ClientsHandler.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387470489028" ignored="false" />
+    <file path="$PROJECT_DIR$/../Server for resort manager/WebService/src/resortmanager/webservice/service/handlers/ClientsHandler.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387485291052" ignored="false" />
+    <file path="/ClientsHandler.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387485232218" ignored="false" />
     <file path="$PROJECT_DIR$/../Server for resort manager/WebService/src/resortmanager/data/models/Client.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385481040381" ignored="false" />
     <file path="$PROJECT_DIR$/../Server for resort manager/WebService/src/resortmanager/webservice/service/handlers/ModeratorsHandler.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387470460343" ignored="false" />
     <file path="/ModeratorsHandler.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385924261056" ignored="false" />
@@ -28,9 +28,9 @@
     <file path="/ChangeEvent.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387112041350" ignored="false" />
     <file path="/AddOrder.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387111290448" ignored="false" />
     <file path="/ChangeOrder.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387112568855" ignored="false" />
-    <file path="/MainClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387477800977" ignored="false" />
+    <file path="/MainClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387486508248" ignored="false" />
     <file path="/FullEventForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387474274545" ignored="false" />
-    <file path="/AddOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387482002375" ignored="false" />
+    <file path="/AddOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387487939517" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +110,21 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/AddOrderForClient.java" line="170" class="AddOrderForClient" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
@@ -130,6 +145,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SendGET.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/SendGET.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MainModerator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainModerator.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -139,70 +163,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="63" selection-start="4463" selection-end="4463" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddOrderForClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AddOrderForClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="43" selection-start="4601" selection-end="4601" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2709#3046#0" expanded="true" />
-                <element signature="e#3035#3036#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FullEventForClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FullEventForClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="62" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1518#1679#0" expanded="true" />
-                <element signature="e#1668#1669#0" expanded="true" />
-                <element signature="e#1759#2360#0" expanded="true" />
-                <element signature="e#2349#2350#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChangeOrder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChangeOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="46" selection-start="4846" selection-end="4846" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AddOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AddOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="0" selection-start="251" selection-end="2314" vertical-scroll-proportion="0.0">
+            <state line="47" column="0" selection-start="1413" selection-end="1695" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChangeEvent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChangeEvent.java">
+      <file leaf-file-name="AddOrderForClient.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AddOrderForClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="139" selection-start="5646" selection-end="5646" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="102" column="0" selection-start="3726" selection-end="3726" vertical-scroll-proportion="0.7745665">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2866#3256#0" expanded="true" />
+                <element signature="e#3245#3246#0" expanded="true" />
+                <element signature="e#3358#3776#0" expanded="true" />
+                <element signature="e#3765#3766#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,13 +198,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Program.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Program.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="33" selection-start="1801" selection-end="1801" vertical-scroll-proportion="-1.1358382">
+            <state line="103" column="16" selection-start="3811" selection-end="3811" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="71" selection-start="4552" selection-end="4552" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/models/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="23" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -253,8 +253,8 @@
         <option value="$PROJECT_DIR$/src/FullEventForClient.java" />
         <option value="$PROJECT_DIR$/src/AllClientsView.java" />
         <option value="$PROJECT_DIR$/src/MainClient.java" />
-        <option value="$PROJECT_DIR$/src/AddOrderForClient.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
+        <option value="$PROJECT_DIR$/src/AddOrderForClient.java" />
       </list>
     </option>
   </component>
@@ -330,10 +330,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="q" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -346,6 +342,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,6 +364,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -702,7 +706,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12653375" sideWeight="0.65" order="2" side_tool="false" content_ui="tabs" />
@@ -711,7 +715,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21472393" sideWeight="0.65" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.70302016" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.73657715" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34060404" sideWeight="0.8136503" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34060404" sideWeight="0.8136503" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35" sideWeight="0.18634969" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -803,23 +807,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/javax/swing/event/TableModelListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="16" selection-start="669" selection-end="669" vertical-scroll-proportion="0.58912385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.27.jar!/com/mysql/jdbc/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="26" selection-start="6478" selection-end="6478" vertical-scroll-proportion="0.3321918" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.27.jar!/com/mysql/jdbc/NonRegisteringDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="34" selection-start="3570" selection-end="3570" vertical-scroll-proportion="-4.48" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AllEmptyRooms.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="43" selection-start="3203" selection-end="3203" vertical-scroll-proportion="0.0">
@@ -848,22 +835,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="63" selection-start="4463" selection-end="4463" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RegistrationClients.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="74" selection-start="8545" selection-end="8596" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FullEventForClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="62" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
@@ -877,9 +848,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/ChangeEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="251" selection-end="2314" vertical-scroll-proportion="0.0">
+        <state line="160" column="139" selection-start="5646" selection-end="5646" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -887,13 +858,6 @@
     <entry file="file://$PROJECT_DIR$/src/MainModerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="47" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChangeEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="139" selection-start="5646" selection-end="5646" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -907,22 +871,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddOrderForClient.java">
+    <entry file="file://$PROJECT_DIR$/src/data/SendGET.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="43" selection-start="4601" selection-end="4601" vertical-scroll-proportion="0.0">
+        <state line="7" column="13" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1278" selection-end="1434" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1413" selection-end="1695" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="71" selection-start="4552" selection-end="4552" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2709#3046#0" expanded="true" />
-            <element signature="e#3035#3036#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="33" selection-start="1801" selection-end="1801" vertical-scroll-proportion="-1.1358382">
+        <state line="103" column="16" selection-start="3811" selection-end="3811" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RegistrationClients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="199" column="74" selection-start="8545" selection-end="8596" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/models/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="23" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddOrderForClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="0" selection-start="3726" selection-end="3726" vertical-scroll-proportion="0.7745665">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2866#3256#0" expanded="true" />
+            <element signature="e#3245#3246#0" expanded="true" />
+            <element signature="e#3358#3776#0" expanded="true" />
+            <element signature="e#3765#3766#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,5 @@
 import data.SendGET;
+import data.models.Client;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -7,6 +8,7 @@ import java.sql.*;
 
 public class Program
 {
+    static int id_client = 0;
     static JFrame jFrameAuthentication;
     public static void main(String[] args)
     {
@@ -66,16 +68,17 @@ public class Program
                 }
                 else
                 {
-                    if (Authentication(jTextFieldLogin.getText(), jPasswordFieldPassword.getText()).equals("moderator"))
+                    String typeUser = Authentication(jTextFieldLogin.getText(), jPasswordFieldPassword.getText());
+                    if (typeUser.equals("moderator"))
                     {
                         jFrameAuthentication.setVisible(false);
                         JFrame windowMainModerator = new MainModerator();
                         windowMainModerator.setVisible(true);
                     }
-                    if (Authentication(jTextFieldLogin.getText(), jPasswordFieldPassword.getText()).equals("client"))
+                    if (typeUser.equals("client"))
                     {
                         jFrameAuthentication.setVisible(false);
-                        JFrame windowMainClient = new MainClient();
+                        JFrame windowMainClient = new MainClient(id_client);
                         windowMainClient.setVisible(true);
                     }
                 }
@@ -96,6 +99,10 @@ public class Program
             status = sendGET.sendGet("http://localhost:9998/api/clients/auth?login=" + login + "&pass=" + password);
             if (status.equals("YES"))
             {
+                String json = sendGET.sendGet("http://localhost:9998/api/clients/byloginpass?login=" + login + "&pass=" + password);
+                Client client = Client.FromJSON(json);
+                id_client = client.getId();
+
                 return "client";
             }
             else
