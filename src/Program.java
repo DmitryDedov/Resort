@@ -54,20 +54,7 @@ public class Program
         jButtonEnter.setLocation(30, 140);
         jpanel.add(jButtonEnter);
 
-//        JButton jButtonRegistration = new JButton("Registration");
-//        jButtonRegistration.setSize(100, 20);
-//        jButtonRegistration.setLocation(150, 140);
-//        jpanel.add(jButtonRegistration);
-
         jFrameAuthentication.setContentPane(jpanel);
-
-//        jButtonRegistration.addActionListener(new ActionListener()
-//        {
-//            public void actionPerformed(ActionEvent e)
-//            {
-//
-//            }
-//        });
 
         jButtonEnter.addActionListener(new ActionListener()
         {

@@ -7,8 +7,6 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.sql.*;
 
 public class AllClientsView extends JFrame
@@ -43,22 +41,8 @@ public class AllClientsView extends JFrame
         final JTable jTable = new JTable(model);
         jTable.setLocation(20, 40);
 
-        model.addColumn("surname");
-        model.addColumn("name");
-        model.addColumn("middlename");
-        model.addColumn("birthday");
-        model.addColumn("passport");
-        model.addColumn("login");
-        model.addColumn("password");
-        model.addColumn("Email");
-        model.addColumn("Date_in");
-        model.addColumn("Date_out");
-        model.addColumn("Number room");
-        model.addColumn("Name hotel");
-        model.addRow(new String[]{"Surname", "Name", "Middlename", "Birthday", "Passport", "Login", "Password", "Email", "Date_in", "Date_out", "Number room", "Name_hotel"});
-
         SelectAllClient();
-        FillTableOnForm(model);
+        FillTableOnForm(model, jTable);
 
         jTable.setSize(980, jTable.getRowCount() * jTable.getRowHeight());
         jpanel.add(jTable);
@@ -70,15 +54,6 @@ public class AllClientsView extends JFrame
                 GetValues(jTable);
             }
         });
-
-//        jTable.addMouseListener(new MouseAdapter() {
-//            @Override
-//            public void mouseClicked(MouseEvent e) {
-//                int col = jTable.columnAtPoint(e.getPoint());
-//                int row = jTable.rowAtPoint(e.getPoint());
-//                }
-//            }
-//        });
 
         TableModel tm = jTable.getModel();
         tm.addTableModelListener(new TableModelListener() {
@@ -112,7 +87,7 @@ public class AllClientsView extends JFrame
             {
                 Delete(surname[0], name[0], middlename[0], birthday[0], passport[0], login[0], password[0], email[0], date_in[0], date_out[0], numberRoom[0], name_hotel[0]);
                 SelectAllClient();
-                FillTableOnForm(model);
+                FillTableOnForm(model, jTable);
             }
         });
 
@@ -203,12 +178,26 @@ public class AllClientsView extends JFrame
         }
     }
 
-    void  FillTableOnForm(DefaultTableModel model)
+    void  FillTableOnForm(DefaultTableModel model, JTable jTable)
     {
-//        while (model.getRowCount() > 1)
+//        while(model.getRowCount() > 1)
 //        {
 //            model.removeRow(1);
 //        }
+
+        model.addColumn("surname");
+        model.addColumn("name");
+        model.addColumn("middlename");
+        model.addColumn("birthday");
+        model.addColumn("passport");
+        model.addColumn("login");
+        model.addColumn("password");
+        model.addColumn("Email");
+        model.addColumn("Date_in");
+        model.addColumn("Date_out");
+        model.addColumn("Number room");
+        model.addColumn("Name hotel");
+        model.addRow(new String[]{"Surname", "Name", "Middlename", "Birthday", "Passport", "Login", "Password", "Email", "Date_in", "Date_out", "Number room", "Name_hotel"});
 
         int index = 0, row = 0, column = 0;
         while (arraySelectDateAboutClients[index] != null)

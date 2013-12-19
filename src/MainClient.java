@@ -121,7 +121,7 @@ public class MainClient extends JFrame
         {
             public void actionPerformed(ActionEvent e)
             {
-                JFrame windowAddOrder = new AddOrder();
+                JFrame windowAddOrder = new AddOrderForClient();
                 windowAddOrder.setVisible(true);
             }
         });
