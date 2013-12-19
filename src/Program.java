@@ -34,7 +34,7 @@ public class Program
         jLabelLogin.setLocation(30, 60);
         jpanel.add(jLabelLogin);
 
-        final JTextField jTextFieldLogin = new JTextField("dds");
+        final JTextField jTextFieldLogin = new JTextField("12");
         jTextFieldLogin.setSize(100, 20);
         jTextFieldLogin.setLocation(150, 60);
         jpanel.add(jTextFieldLogin);
@@ -44,7 +44,7 @@ public class Program
         jLabelPassword.setLocation(30, 100);
         jpanel.add(jLabelPassword);
 
-        final JPasswordField jPasswordFieldPassword = new JPasswordField("dds");
+        final JPasswordField jPasswordFieldPassword = new JPasswordField("newpass");
         jPasswordFieldPassword.setSize(100, 20);
         jPasswordFieldPassword.setLocation(150, 100);
         jpanel.add(jPasswordFieldPassword);
@@ -79,18 +79,24 @@ public class Program
                 }
                 else
                 {
-                    if (Authentication(jTextFieldLogin.getText(), jPasswordFieldPassword.getText()))
+                    if (Authentication(jTextFieldLogin.getText(), jPasswordFieldPassword.getText()).equals("moderator"))
                     {
                         jFrameAuthentication.setVisible(false);
                         JFrame windowMainModerator = new MainModerator();
                         windowMainModerator.setVisible(true);
+                    }
+                    if (Authentication(jTextFieldLogin.getText(), jPasswordFieldPassword.getText()).equals("client"))
+                    {
+                        jFrameAuthentication.setVisible(false);
+                        JFrame windowMainClient = new MainClient();
+                        windowMainClient.setVisible(true);
                     }
                 }
             }
         });
 
     }
-    static boolean Authentication(String login, String password)
+    static String Authentication(String login, String password)
     {
         SendGET sendGET = new SendGET();
         try
@@ -98,7 +104,12 @@ public class Program
             String status = sendGET.sendGet("http://localhost:9998/api/moderators/auth?login=" + login + "&pass=" + password);
             if (status.equals("YES"))
             {
-                return true;
+                return "moderator";
+            }
+            status = sendGET.sendGet("http://localhost:9998/api/clients/auth?login=" + login + "&pass=" + password);
+            if (status.equals("YES"))
+            {
+                return "client";
             }
             else
                 JOptionPane.showMessageDialog(null, "Not exists!");
@@ -106,12 +117,12 @@ public class Program
         catch(SQLException e)
         {
             JOptionPane.showMessageDialog(null, "Error in authentication!");
-            return false;
+            return "nobody";
         }
         catch (Exception e)
         {
 
         }
-        return false;
+        return "nobody";
     }
 }
