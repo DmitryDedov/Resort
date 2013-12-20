@@ -119,7 +119,7 @@ public class AddOrderForClient extends JFrame
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
             Statement statement = connection.createStatement();
 
-            ResultSet resultSet = statement.executeQuery("select ord_name from orders where type = '" + type + "'");
+            ResultSet resultSet = statement.executeQuery("select ord_name from orders where ord_type = '" + type + "'");
             int index = 0;
             while (resultSet.next())
             {
@@ -150,7 +150,7 @@ public class AddOrderForClient extends JFrame
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
             Statement statement = connection.createStatement();
 
-            ResultSet resultSet = statement.executeQuery("select id_order from orders where type = '" + type + "' and ord_name = '" + name + "'");
+            ResultSet resultSet = statement.executeQuery("select id_order from orders where ord_type = '" + type + "' and ord_name = '" + name + "'");
             if (resultSet.next())
             {
                 id_order = resultSet.getInt("id_order");

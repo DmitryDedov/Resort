@@ -22,7 +22,7 @@ public class RegistrationClients extends JFrame
         jLabelRegistration.setLocation(100, 10);
         jpanel.add(jLabelRegistration);
 
-        JLabel jLabelSurname = new JLabel("*Input surname: ");
+        JLabel jLabelSurname = new JLabel("Input surname: ");
         jLabelSurname.setSize(150, 20);
         jLabelSurname.setLocation(30, 50);
         jpanel.add(jLabelSurname);
@@ -32,7 +32,7 @@ public class RegistrationClients extends JFrame
         jTextFieldSurname.setLocation(150, 50);
         jpanel.add(jTextFieldSurname);
 
-        JLabel jLabelName = new JLabel("*Input name: ");
+        JLabel jLabelName = new JLabel("Input name: ");
         jLabelName.setSize(150, 20);
         jLabelName.setLocation(30, 90);
         jpanel.add(jLabelName);
@@ -42,7 +42,7 @@ public class RegistrationClients extends JFrame
         jTextFieldName.setLocation(150, 90);
         jpanel.add(jTextFieldName);
 
-        JLabel jLabelMiddlename = new JLabel("*Input middlename: ");
+        JLabel jLabelMiddlename = new JLabel("Input middlename: ");
         jLabelMiddlename.setSize(150, 20);
         jLabelMiddlename.setLocation(30, 130);
         jpanel.add(jLabelMiddlename);
@@ -62,7 +62,7 @@ public class RegistrationClients extends JFrame
         jTextFieldBirthday.setLocation(150, 170);
         jpanel.add(jTextFieldBirthday);
 
-        JLabel jLabelPassport = new JLabel("*Input passport: ");
+        JLabel jLabelPassport = new JLabel("Input passport: ");
         jLabelPassport.setSize(150, 20);
         jLabelPassport.setLocation(30, 210);
         jpanel.add(jLabelPassport);

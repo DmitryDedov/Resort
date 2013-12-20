@@ -64,7 +64,7 @@ public class AddOrder extends JFrame
         {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
             Statement statement = connection.createStatement();
-            statement.executeUpdate("insert into orders (ord_name, type) values ('" + name + "', '" + type + "')");
+            statement.executeUpdate("insert into orders (ord_name, ord_type) values ('" + name + "', '" + type + "')");
         }
         catch (SQLException e)
         {

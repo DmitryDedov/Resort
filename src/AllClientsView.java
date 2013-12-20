@@ -61,7 +61,6 @@ public class AllClientsView extends JFrame
             public void tableChanged(TableModelEvent e) {
                 if (e.getType() == TableModelEvent.UPDATE)
                 {
-                    //GetValues(jTable);
                     String updateValue = jTable.getValueAt(jTable.getSelectedRow(), e.getColumn()).toString();
                     String nameColumn = jTable.getColumnName(e.getColumn());
                     if (e.getColumn() < 8)

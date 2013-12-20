@@ -132,7 +132,7 @@ public class MainClient extends JFrame
         {
             public void actionPerformed(ActionEvent e)
             {
-                JFrame windowChangeOrder = new ChangeOrder();
+                JFrame windowChangeOrder = new ChangeOrderForClient(id_client);
                 windowChangeOrder.setVisible(true);
             }
         });
