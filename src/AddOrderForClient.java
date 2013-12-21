@@ -7,7 +7,7 @@ public class AddOrderForClient extends JFrame
 {
     int id_order = 0;
     int id_client = 0;
-    String[] arrayOrderType = new String[20];
+    String[] arrayOrderName = new String[20];
     AddOrderForClient(int id_client_allien)
     {
         super("Add order");
@@ -112,9 +112,9 @@ public class AddOrderForClient extends JFrame
     {
         try
         {
-            for (int i = 0; i < arrayOrderType.length; i++)
+            for (int i = 0; i < arrayOrderName.length; i++)
             {
-                arrayOrderType[i] = null;
+                arrayOrderName[i] = null;
             }
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
             Statement statement = connection.createStatement();
@@ -123,7 +123,7 @@ public class AddOrderForClient extends JFrame
             int index = 0;
             while (resultSet.next())
             {
-                arrayOrderType[index] = resultSet.getString("ord_name");
+                arrayOrderName[index] = resultSet.getString("ord_name");
                 index++;
             }
         }
@@ -136,9 +136,9 @@ public class AddOrderForClient extends JFrame
     void FillOrderName(JComboBox jComboBox)
     {
         int index = 0;
-        while(arrayOrderType[index] != null)
+        while(arrayOrderName[index] != null)
         {
-            jComboBox.addItem(arrayOrderType[index]);
+            jComboBox.addItem(arrayOrderName[index]);
             index++;
         }
     }

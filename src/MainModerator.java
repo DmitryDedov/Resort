@@ -9,7 +9,7 @@ class MainModerator extends JFrame
     MainModerator()
     {
         super("Moderator");
-        weather.GetWeather();
+        //weather.GetWeather();
         AddComponentOnForm();
     }
 

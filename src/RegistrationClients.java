@@ -1,14 +1,19 @@
-import com.toedter.calendar.JCalendar;
 import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.Date;
 
 public class RegistrationClients extends JFrame
 {
+    String[] arrayNumberRoom = new String[100];
+
     RegistrationClients()
     {
         super("Registration");
@@ -19,7 +24,7 @@ public class RegistrationClients extends JFrame
     void AddComponentOnForm()
     {
         JPanel jpanel = new JPanel();
-        jpanel.setSize(300, 600);
+        jpanel.setSize(300, 700);
         jpanel.setLayout(null);
 
         JLabel jLabelRegistration = new JLabel("Registration client:");
@@ -93,61 +98,80 @@ public class RegistrationClients extends JFrame
         jLabelNameHotel.setLocation(30, 290);
         jpanel.add(jLabelNameHotel);
 
-        final JTextField jTextFieldNameHotel = new JTextField();
-        jTextFieldNameHotel.setSize(100, 20);
-        jTextFieldNameHotel.setLocation(150, 290);
-        jpanel.add(jTextFieldNameHotel);
+        final JComboBox jComboBoxNameHotel = new JComboBox();
+        jComboBoxNameHotel.setSize(100, 20);
+        jComboBoxNameHotel.setLocation(150, 290);
+        jComboBoxNameHotel.addItem("Pektoral");
+        jpanel.add(jComboBoxNameHotel);
+
+        JLabel jLabelCountPlace = new JLabel("Input count place: ");
+        jLabelCountPlace.setSize(150, 20);
+        jLabelCountPlace.setLocation(30, 330);
+        jpanel.add(jLabelCountPlace);
+
+        final JComboBox jComboBoxCountPlace = new JComboBox();
+        jComboBoxCountPlace.setSize(100, 20);
+        jComboBoxCountPlace.setLocation(150, 330);
+        jComboBoxCountPlace.addItem(1);
+        jComboBoxCountPlace.addItem(2);
+        jComboBoxCountPlace.addItem(3);
+        jComboBoxCountPlace.addItem(4);
+        jComboBoxCountPlace.addItem(5);
+        jpanel.add(jComboBoxCountPlace);
 
         JLabel jLabelNumberRoom = new JLabel("Input number room: ");
         jLabelNumberRoom.setSize(150, 20);
-        jLabelNumberRoom.setLocation(30, 330);
+        jLabelNumberRoom.setLocation(30, 370);
         jpanel.add(jLabelNumberRoom);
 
-        final JTextField jTextFieldNumberRoom = new JTextField();
-        jTextFieldNumberRoom.setSize(100, 20);
-        jTextFieldNumberRoom.setLocation(150, 330);
-        jpanel.add(jTextFieldNumberRoom);
+        final JComboBox jComboBoxNumberRoom = new JComboBox();
+        jComboBoxNumberRoom.setSize(100, 20);
+        jComboBoxNumberRoom.setLocation(150, 370);
+        jComboBoxNumberRoom.setEditable(true);
+        jpanel.add(jComboBoxNumberRoom);
 
         JLabel jLabelDateIn = new JLabel("Input date in: ");
         jLabelDateIn.setSize(150, 20);
-        jLabelDateIn.setLocation(30, 370);
+        jLabelDateIn.setLocation(30, 410);
         jpanel.add(jLabelDateIn);
 
         final JDateChooser jDateChooserDateIn = new JDateChooser();
         jDateChooserDateIn.setSize(100, 20);
-        jDateChooserDateIn.setLocation(150, 370);
+        jDateChooserDateIn.setLocation(150, 410);
         jDateChooserDateIn.setDateFormatString("yyyy-MM-dd");
+        jDateChooserDateIn.setDate(new Date());
         jpanel.add(jDateChooserDateIn);
 
         JLabel jLabelDateOut = new JLabel("Input date out: ");
         jLabelDateOut.setSize(150, 20);
-        jLabelDateOut.setLocation(30, 410);
+        jLabelDateOut.setLocation(30, 450);
         jpanel.add(jLabelDateOut);
 
         final JDateChooser jDateChooserDateOut = new JDateChooser();
         jDateChooserDateOut.setSize(100, 20);
-        jDateChooserDateOut.setLocation(150, 410);
+        jDateChooserDateOut.setLocation(150, 450);
         jDateChooserDateOut.setDateFormatString("yyyy-MM-dd");
         jpanel.add(jDateChooserDateOut);
 
         JButton jButtonRegistration = new JButton("Registration");
         jButtonRegistration.setSize(100, 20);
-        jButtonRegistration.setLocation(100, 450);
+        jButtonRegistration.setLocation(100, 490);
         jpanel.add(jButtonRegistration);
 
         setContentPane(jpanel);
-        setSize(300, 600);
+        setSize(300, 700);
 
         jButtonRegistration.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
             {
                 if ((jTextFieldSurname.getText().equals("")) || (jTextFieldName.getText().equals("")) || (jTextFieldMiddlename.getText().equals(""))
-                        || (jDateChooserBirthday.getDate().equals("")) || (jTextFieldPassport.getText().equals("")) || (jTextFieldEmail.getText().equals("")) ||
-                        (jTextFieldNameHotel.getText().equals("")) || (jTextFieldNumberRoom.getText().equals("")) || (jDateChooserDateIn.getDate().equals("")) ||
+                        || (jDateChooserBirthday.getDate().equals("")) || (jTextFieldPassport.getText().equals("")) ||
+                        (jTextFieldEmail.getText().equals("")) || (jComboBoxNameHotel.getSelectedItem().equals("")) ||
+                        (jComboBoxNumberRoom.getSelectedItem().equals("")) || (jDateChooserDateIn.getDate().equals("")) ||
                         (jDateChooserDateOut.getDate().equals("")))
                 {
-                    JOptionPane.showMessageDialog(null, "Input data correct!");
+                    JOptionPane.showMessageDialog(null, "Input all values!");
                 }
                 else
                 {
@@ -157,8 +181,8 @@ public class RegistrationClients extends JFrame
                     String dateOut = simpleDateFormat.format(jDateChooserDateOut.getDate());
 
                     if (RegistrationClient(jTextFieldSurname.getText(), jTextFieldName.getText(), jTextFieldMiddlename.getText(), dateBirthday,
-                            jTextFieldPassport.getText(), jTextFieldEmail.getText(), jTextFieldNameHotel.getText(), jTextFieldNumberRoom.getText(),
-                            dateIn, dateOut))
+                            jTextFieldPassport.getText(), jTextFieldEmail.getText(), jComboBoxNameHotel.getSelectedItem().toString(),
+                            jComboBoxNumberRoom.getSelectedItem().toString(), dateIn, dateOut))
                     {
                         JOptionPane.showMessageDialog(null, "You have successfully registered!");
                         dispose();
@@ -166,6 +190,116 @@ public class RegistrationClients extends JFrame
                 }
             }
         });
+
+        jComboBoxCountPlace.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                JComboBox box = (JComboBox)e.getSource();
+                int countPlace = Integer.parseInt(box.getSelectedItem().toString());
+                String nameHotel = jComboBoxNameHotel.getSelectedItem().toString();
+                SelectNumberRoomFromTable(nameHotel, countPlace);
+                jComboBoxNumberRoom.removeAllItems();
+                FillNumberRoom(jComboBoxNumberRoom);
+            }
+        });
+
+        jComboBoxNumberRoom.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                jDateChooserDateOut.setEnabled(true);
+                jDateChooserDateOut.setDate(null);
+                JComboBox box = (JComboBox)e.getSource();
+                int numberRoom = Integer.parseInt(box.getSelectedItem().toString());
+                String nameHotel = jComboBoxNameHotel.getSelectedItem().toString();
+
+                String dateIn = CheckDateInOut(nameHotel, numberRoom);
+
+                if (dateIn == null)
+                {
+
+                }
+                else
+                {
+                    java.util.Date date = null;
+                    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+                    try
+                    {
+                        date = format.parse(dateIn);
+                    }
+                    catch (ParseException e1)
+                    {
+                        e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    }
+                    jDateChooserDateOut.setDate(date);
+                    jDateChooserDateOut.setEnabled(false);
+                }
+            }
+        });
+    }
+
+    String CheckDateInOut(String nameHotel, int numberRoom)
+    {
+        try
+        {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
+            Statement statement = connection.createStatement();
+
+            ResultSet resultSet = statement.executeQuery("select min(Date_in) from datein_out where " +
+                    "(SELECT DATE_FORMAT(sysdate(), '%Y-%m-%d')) < date_out and " +
+                    "(SELECT DATE_FORMAT(sysdate(), '%Y-%m-%d')) < date_in and id_room in " +
+                    "(select id_room from rooms where num_of_room = " + numberRoom + " and id_hotel in " +
+                    "(select id_hotel from hotels where name_hotel = '" + nameHotel + "'))");
+            if (resultSet.next())
+            {
+                return resultSet.getString("min(Date_in)");
+            }
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        return null;
+    }
+
+    void SelectNumberRoomFromTable(String nameHotel, int countPlace)
+    {
+        try
+        {
+            for (int i = 0; i < arrayNumberRoom.length; i++)
+            {
+                arrayNumberRoom[i] = null;
+            }
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
+            Statement statement = connection.createStatement();
+
+            ResultSet resultSet = statement.executeQuery("select num_of_room from rooms r where id_hotel in (select id_hotel from hotels where name_hotel = '" +
+                    nameHotel + "') and count_of_place = " + countPlace + " and 0 in " +
+                    "(select count(id_room) from DateIn_Out d where r.id_room = d.id_room and " +
+                    "(SELECT DATE_FORMAT(sysdate(), '%Y-%m-%d')) < d.date_out and " +
+                    "(SELECT DATE_FORMAT(sysdate(), '%Y-%m-%d')) > d.date_in)");
+            int index = 0;
+            while (resultSet.next())
+            {
+                arrayNumberRoom[index] = resultSet.getString("num_of_room");
+                index++;
+            }
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    void FillNumberRoom(JComboBox jComboBox)
+    {
+        int index = 0;
+        while(arrayNumberRoom[index] != null)
+        {
+            jComboBox.addItem(arrayNumberRoom[index]);
+            index++;
+        }
     }
 
     boolean RegistrationClient(String surname, String name, String middlename, String birthday, String passport, String email,
@@ -185,7 +319,6 @@ public class RegistrationClients extends JFrame
             if (resultSet.next())
             {
                 lastIDClient = resultSet.getInt("LAST_INSERT_ID()");
-//                JOptionPane.showMessageDialog(null, "lastID" + lastIDClient);
             }
 
             resultSet = statement.executeQuery("SELECT id_room from Rooms where id_hotel in (select id_hotel from Hotels where name_hotel = '" +
@@ -198,7 +331,10 @@ public class RegistrationClients extends JFrame
             statement.executeUpdate("insert into DateIn_Out (id_room, id_client, Date_in, Date_out) values (" + id_room + "," + lastIDClient +
                     ",'" + dateIn + "','" + dateOut + "')");
 
-            resultSet = statement.executeQuery("select num_of_room from Rooms r where count_of_place in (select count(id_room) from DateIn_Out d where " + id_room + "= d.id_room and (SELECT DATE_FORMAT(sysdate(), '%Y-%m-%d')) < d.date_out and (SELECT DATE_FORMAT(sysdate(), '%Y-%m-%d')) > d.date_in)");
+            resultSet = statement.executeQuery("select num_of_room from Rooms r where id_room = " + id_room + " and count_of_place in " +
+                    "(select count(id_room) from DateIn_Out d where r.id_room = d.id_room " +
+                    "and (SELECT DATE_FORMAT(sysdate(), '%Y-%m-%d')) < d.date_out " +
+                    "and (SELECT DATE_FORMAT(sysdate(), '%Y-%m-%d')) >= d.date_in);");
             if (resultSet.next())
             {
                 numIsEmpty = false;
@@ -206,10 +342,6 @@ public class RegistrationClients extends JFrame
             if (!numIsEmpty)
             {
                 statement.executeUpdate("UPDATE rooms SET is_empty = 1 where id_room = " + id_room);
-            }
-            else
-            {
-                //JOptionPane.showMessageDialog(null, "12312512512");
             }
 
             connection.close();

@@ -9,7 +9,7 @@
     <file path="/Registration.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385924111575" ignored="false" />
     <file path="/MainModerator.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387610972712" ignored="false" />
     <file path="/Weather.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1383834235340" ignored="false" />
-    <file path="/RegistrationClients.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387615893791" ignored="false" />
+    <file path="/RegistrationClients.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387629046026" ignored="false" />
     <file path="/Client.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385479925786" ignored="false" />
     <file path="/SelectRoom.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1384166470823" ignored="false" />
     <file path="/ClientTest.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385662984879" ignored="false" />
@@ -30,7 +30,7 @@
     <file path="/ChangeOrder.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387609557091" ignored="false" />
     <file path="/MainClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387525692690" ignored="false" />
     <file path="/FullEventForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387474274545" ignored="false" />
-    <file path="/AddOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387528576264" ignored="false" />
+    <file path="/AddOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387617938839" ignored="false" />
     <file path="/ChangeOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387528915502" ignored="false" />
     <file path="/AddService.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387610572874" ignored="false" />
     <file path="/ChangeService.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387611309516" ignored="false" />
@@ -127,10 +127,25 @@
       <file leaf-file-name="RegistrationClients.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RegistrationClients.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="43" selection-start="6597" selection-end="6597" vertical-scroll-proportion="-0.12537314">
+            <state line="315" column="31" selection-start="13038" selection-end="13038" vertical-scroll-proportion="0.6421053">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5937#7736#0" expanded="true" />
+                <element signature="e#7725#7726#0" expanded="true" />
+                <element signature="e#7786#8309#0" expanded="true" />
+                <element signature="e#8298#8299#0" expanded="true" />
+                <element signature="e#8359#9604#0" expanded="true" />
+                <element signature="e#9593#9594#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AllEmptyRooms.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AllEmptyRooms.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="13" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,7 +153,7 @@
       <file leaf-file-name="ChangeOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ChangeOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="0" selection-start="345" selection-end="5112" vertical-scroll-proportion="0.0">
+            <state line="21" column="56" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,43 +184,7 @@
       <file leaf-file-name="MainModerator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainModerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="68" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddOrder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AddOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="85" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddOrderForClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AddOrderForClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="83" selection-start="4931" selection-end="4931" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChangeOrderForClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChangeOrderForClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="28" selection-start="4448" selection-end="4448" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AllClientsView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AllClientsView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="14" selection-start="1451" selection-end="1501" vertical-scroll-proportion="0.0">
+            <state line="13" column="58" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -215,6 +194,35 @@
         <entry file="file://$PROJECT_DIR$/src/MainClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="129" column="84" selection-start="4630" selection-end="4630" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FullEventForClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FullEventForClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="13" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddOrderForClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AddOrderForClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="135" column="0" selection-start="4719" selection-end="4937" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AllClientsView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AllClientsView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="121" column="41" selection-start="4410" selection-end="4427" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -237,14 +245,14 @@
         <option value="$PROJECT_DIR$/src/FullEventForClient.java" />
         <option value="$PROJECT_DIR$/src/MainClient.java" />
         <option value="$PROJECT_DIR$/src/AddOrder.java" />
-        <option value="$PROJECT_DIR$/src/AddOrderForClient.java" />
         <option value="$PROJECT_DIR$/src/ChangeOrderForClient.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
         <option value="$PROJECT_DIR$/src/ChangeOrder.java" />
         <option value="$PROJECT_DIR$/src/AddService.java" />
-        <option value="$PROJECT_DIR$/src/MainModerator.java" />
         <option value="$PROJECT_DIR$/src/ChangeService.java" />
         <option value="$PROJECT_DIR$/src/AllClientsView.java" />
+        <option value="$PROJECT_DIR$/src/AddOrderForClient.java" />
+        <option value="$PROJECT_DIR$/src/MainModerator.java" />
         <option value="$PROJECT_DIR$/src/RegistrationClients.java" />
       </list>
     </option>
@@ -705,20 +713,20 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21472393" sideWeight="0.65" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.70302016" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.73657715" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33724833" sideWeight="0.8136503" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26174498" sideWeight="0.8136503" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35" sideWeight="0.18634969" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.73657715" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32586208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32550335" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.73657715" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931036" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.72651005" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5872483" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1719697" sideWeight="0.6627517" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1719697" sideWeight="0.738255" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26174498" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12653375" sideWeight="0.65" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.72651005" order="4" side_tool="true" content_ui="tabs" />
@@ -798,26 +806,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/FullEventForClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="62" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1518#1679#0" expanded="true" />
-            <element signature="e#1668#1669#0" expanded="true" />
-            <element signature="e#1759#2360#0" expanded="true" />
-            <element signature="e#2349#2350#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChangeEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="139" selection-start="5646" selection-end="5646" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/SendGET.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="13" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
@@ -835,13 +823,6 @@
     <entry file="file://$PROJECT_DIR$/src/data/models/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="23" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="84" selection-start="4630" selection-end="4630" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -867,22 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="155" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChangeOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="0" selection-start="345" selection-end="5112" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ChangeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="128" column="79" selection-start="4535" selection-end="4535" vertical-scroll-proportion="0.0">
@@ -892,32 +857,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainModerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="58" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChangeOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="56" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="155" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AddOrderForClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="83" selection-start="4931" selection-end="4931" vertical-scroll-proportion="0.0">
+        <state line="135" column="0" selection-start="4719" selection-end="4937" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllEmptyRooms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AllClientsView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="14" selection-start="1451" selection-end="1501" vertical-scroll-proportion="0.0">
+        <state line="121" column="41" selection-start="4410" selection-end="4427" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainModerator.java">
+    <entry file="file://$PROJECT_DIR$/src/MainClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="68" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.0">
+        <state line="129" column="84" selection-start="4630" selection-end="4630" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FullEventForClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RegistrationClients.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="43" selection-start="6597" selection-end="6597" vertical-scroll-proportion="-0.12537314">
+        <state line="315" column="31" selection-start="13038" selection-end="13038" vertical-scroll-proportion="0.6421053">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5937#7736#0" expanded="true" />
+            <element signature="e#7725#7726#0" expanded="true" />
+            <element signature="e#7786#8309#0" expanded="true" />
+            <element signature="e#8298#8299#0" expanded="true" />
+            <element signature="e#8359#9604#0" expanded="true" />
+            <element signature="e#9593#9594#0" expanded="true" />
           </folding>
         </state>
       </provider>
