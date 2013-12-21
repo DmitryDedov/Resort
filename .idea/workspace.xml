@@ -33,7 +33,7 @@
     <file path="/AddOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387617938839" ignored="false" />
     <file path="/ChangeOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387528915502" ignored="false" />
     <file path="/AddService.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387610572874" ignored="false" />
-    <file path="/ChangeService.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387611309516" ignored="false" />
+    <file path="/ChangeService.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387635697463" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,10 +170,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChangeOrder.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ChangeOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ChangeOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="55" selection-start="2576" selection-end="2576" vertical-scroll-proportion="0.24210526">
+            <state line="87" column="0" selection-start="2670" selection-end="3163" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#2376#2600#0" expanded="true" />
                 <element signature="e#2589#2590#0" expanded="true" />
@@ -182,12 +182,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AddService.java">
+      <file leaf-file-name="ChangeService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ChangeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="155" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.0">
+            <state line="94" column="88" selection-start="3017" selection-end="3017" vertical-scroll-proportion="1.3131579">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2404#2628#0" expanded="true" />
+                <element signature="e#2617#2618#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -248,7 +250,6 @@
         <option value="$PROJECT_DIR$/src/ChangeOrderForClient.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
         <option value="$PROJECT_DIR$/src/AddService.java" />
-        <option value="$PROJECT_DIR$/src/ChangeService.java" />
         <option value="$PROJECT_DIR$/src/AllClientsView.java" />
         <option value="$PROJECT_DIR$/src/AddOrderForClient.java" />
         <option value="$PROJECT_DIR$/src/MainModerator.java" />
@@ -257,6 +258,7 @@
         <option value="$PROJECT_DIR$/src/AllEmptyRooms.java" />
         <option value="$PROJECT_DIR$/src/AddOrder.java" />
         <option value="$PROJECT_DIR$/src/ChangeOrder.java" />
+        <option value="$PROJECT_DIR$/src/ChangeService.java" />
       </list>
     </option>
   </component>
@@ -837,15 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChangeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="79" selection-start="4535" selection-end="4535" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainModerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="58" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
@@ -882,15 +875,6 @@
             <element signature="e#8269#8270#0" expanded="true" />
             <element signature="e#8330#9575#0" expanded="true" />
             <element signature="e#9564#9565#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="66" selection-start="4358" selection-end="4358" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -932,10 +916,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ChangeOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="55" selection-start="2576" selection-end="2576" vertical-scroll-proportion="0.24210526">
+        <state line="87" column="0" selection-start="2670" selection-end="3163" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#2376#2600#0" expanded="true" />
             <element signature="e#2589#2590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="66" selection-start="4358" selection-end="4358" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChangeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="88" selection-start="3017" selection-end="3017" vertical-scroll-proportion="1.3131579">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2404#2628#0" expanded="true" />
+            <element signature="e#2617#2618#0" expanded="true" />
           </folding>
         </state>
       </provider>

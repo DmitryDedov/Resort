@@ -5,6 +5,8 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.*;
 
 public class ChangeService extends JFrame
@@ -64,8 +66,38 @@ public class ChangeService extends JFrame
             }
         });
 
+        JButton jButtonDelete = new JButton("Delete");
+        jButtonDelete.setLocation(700, 20);
+        jButtonDelete.setSize(100, 30);
+        jpanel.add(jButtonDelete);
+
+        jButtonDelete.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                Delete();
+                SelectAllOrders();
+                FillTableOnForm(model);
+            }
+        });
+
         setContentPane(jpanel);
         setSize(900, 300);
+    }
+
+    void Delete()
+    {
+        try
+        {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
+            Statement statement = connection.createStatement();
+
+            statement.executeUpdate("delete from services where id_serv = " + id_service);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 
     void GetValues(JTable jTable)
