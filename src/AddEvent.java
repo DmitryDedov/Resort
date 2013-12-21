@@ -1,7 +1,11 @@
+import com.toedter.calendar.JDateChooser;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class AddEvent extends JFrame
 {
@@ -42,20 +46,26 @@ public class AddEvent extends JFrame
         jLabelEventDate.setLocation(20, 130);
         jpanel.add(jLabelEventDate);
 
-        final JTextField jTextFieldEventDate = new JTextField();
-        jTextFieldEventDate.setSize(100, 20);
-        jTextFieldEventDate.setLocation(150, 130);
-        jpanel.add(jTextFieldEventDate);
+        final JDateChooser jDateChooserDate= new JDateChooser();
+        jDateChooserDate.setSize(100, 20);
+        jDateChooserDate.setLocation(150, 130);
+        jDateChooserDate.setDateFormatString("yyyy-MM-dd");
+        jpanel.add(jDateChooserDate);
 
         JLabel jLabelEventTime = new JLabel("Time:");
         jLabelEventTime.setSize(100, 20);
         jLabelEventTime.setLocation(20, 170);
         jpanel.add(jLabelEventTime);
 
-        final JTextField jTextFieldEventTime = new JTextField();
-        jTextFieldEventTime.setSize(100, 20);
-        jTextFieldEventTime.setLocation(150, 170);
-        jpanel.add(jTextFieldEventTime);
+        java.util.Date date = new java.util.Date();
+        final JSpinner jSpinner = new JSpinner();
+        SpinnerDateModel spinnerDateModel = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
+        jSpinner.setModel(spinnerDateModel);
+        JSpinner.DateEditor dateEditor = new JSpinner.DateEditor(jSpinner, "hh:mm");
+        jSpinner.setEditor(dateEditor);
+        jSpinner.setLocation(150, 170);
+        jSpinner.setSize(100, 20);
+        jpanel.add(jSpinner);
 
         JButton jButtonAdd = new JButton("Add");
         jButtonAdd.setSize(100, 20);
@@ -66,7 +76,12 @@ public class AddEvent extends JFrame
         {
             public void actionPerformed(ActionEvent e)
             {
-                AddEventOnBD(jTextFieldEventName.getText(), jTextFieldEventPlace.getText(), jTextFieldEventDate.getText(), jTextFieldEventTime.getText());
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                SimpleDateFormat simpletimeFormat1 = new SimpleDateFormat("hh:mm");
+                String date = simpleDateFormat.format(jDateChooserDate.getDate());
+                String time = simpletimeFormat1.format(jSpinner.getValue());
+
+                AddEventOnBD(jTextFieldEventName.getText(), jTextFieldEventPlace.getText(), date, time);
                 dispose();
             }
         });

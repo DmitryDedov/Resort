@@ -35,10 +35,12 @@ public class AddOrder extends JFrame
         jLabelEventPlace.setLocation(20, 90);
         jpanel.add(jLabelEventPlace);
 
-        final JTextField jTextFieldEventPlace = new JTextField();
-        jTextFieldEventPlace.setSize(100, 20);
-        jTextFieldEventPlace.setLocation(150, 90);
-        jpanel.add(jTextFieldEventPlace);
+        final JComboBox jComboBoxOrderType = new JComboBox();
+        jComboBoxOrderType.setSize(100, 20);
+        jComboBoxOrderType.setLocation(150, 90);
+        jComboBoxOrderType.addItem("Food");
+        jComboBoxOrderType.addItem("Drink");
+        jpanel.add(jComboBoxOrderType);
 
         JButton jButtonAdd = new JButton("Add");
         jButtonAdd.setSize(100, 20);
@@ -49,7 +51,7 @@ public class AddOrder extends JFrame
         {
             public void actionPerformed(ActionEvent e)
             {
-                AddOrderOnBD(jTextFieldEventName.getText(), jTextFieldEventPlace.getText());
+                AddOrderOnBD(jTextFieldEventName.getText(), jComboBoxOrderType.getSelectedItem().toString());
                 dispose();
             }
         });
