@@ -21,6 +21,7 @@
     </orderEntry>
     <orderEntry type="library" name="JAX-RS-jersey-1.12" level="project" />
     <orderEntry type="library" name="junit:junit:4.9" level="project" />
+    <orderEntry type="library" name="com.toedter:jcalendar:1.4" level="project" />
   </component>
 </module>
 

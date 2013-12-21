@@ -42,7 +42,7 @@ public class AllClientsView extends JFrame
         jTable.setLocation(20, 40);
 
         SelectAllClient();
-        FillTableOnForm(model, jTable);
+        FillTableOnForm(model);
 
         jTable.setSize(980, jTable.getRowCount() * jTable.getRowHeight());
         jpanel.add(jTable);
@@ -86,7 +86,7 @@ public class AllClientsView extends JFrame
             {
                 Delete(surname[0], name[0], middlename[0], birthday[0], passport[0], login[0], password[0], email[0], date_in[0], date_out[0], numberRoom[0], name_hotel[0]);
                 SelectAllClient();
-                FillTableOnForm(model, jTable);
+                FillTableOnForm(model);
             }
         });
 
@@ -177,12 +177,9 @@ public class AllClientsView extends JFrame
         }
     }
 
-    void  FillTableOnForm(DefaultTableModel model, JTable jTable)
+    void  FillTableOnForm(DefaultTableModel model)
     {
-//        while(model.getRowCount() > 1)
-//        {
-//            model.removeRow(1);
-//        }
+        //DefaultTableModel model = new DefaultTableModel();
 
         model.addColumn("surname");
         model.addColumn("name");

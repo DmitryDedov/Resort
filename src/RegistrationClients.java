@@ -1,3 +1,5 @@
+import com.toedter.calendar.JCalendar;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -101,6 +103,11 @@ public class RegistrationClients extends JFrame
         jTextFieldNumberRoom.setSize(100, 20);
         jTextFieldNumberRoom.setLocation(150, 330);
         jpanel.add(jTextFieldNumberRoom);
+
+//        JCalendar jCalendarDateIn = new JCalendar();
+//        jCalendarDateIn.setLocation(30, 370);
+//        jCalendarDateIn.setSize(200, 100);
+//        jpanel.add(jCalendarDateIn);
 
         JLabel jLabelDateIn = new JLabel("Input date in: ");
         jLabelDateIn.setSize(150, 20);

@@ -13,7 +13,7 @@ public class ChangeOrder extends JFrame
     final String[] name = new String[1];
     final String[] type = new String[1];
 
-    String[] arrayRooms = new String[100];
+    String[] arrayOrders = new String[100];
     ChangeOrder()
     {
         super("Change order");
@@ -75,16 +75,16 @@ public class ChangeOrder extends JFrame
         TableModel model = jTable.getModel();
         name[0] = model.getValueAt(selectedRow, 0).toString();
         type[0] = model.getValueAt(selectedRow, 1).toString();
-        GetIdEvent(name[0], type[0]);
+        GetIdOrder(name[0], type[0]);
     }
 
-    void GetIdEvent(String name, String type)
+    void GetIdOrder(String name, String type)
     {
         try
         {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select id_order from orders where ord_name = '" + name + "' and type = '" + type + "'");
+            ResultSet resultSet = statement.executeQuery("select id_order from orders where ord_name = '" + name + "' and ord_type = '" + type + "'");
             if (resultSet.next())
             {
                 id_order = resultSet.getInt("id_order");
@@ -103,7 +103,7 @@ public class ChangeOrder extends JFrame
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
             Statement statement = connection.createStatement();
 
-            statement.executeUpdate("update orders set ord_" + nameColumn + " ='" + updateValue + "' where id_event = " + id_order);
+            statement.executeUpdate("update orders set ord_" + nameColumn + " ='" + updateValue + "' where id_order = " + id_order);
         }
         catch (SQLException e)
         {
@@ -113,20 +113,20 @@ public class ChangeOrder extends JFrame
 
     void SelectAllOrders()
     {
-        for (int i = 0; i < arrayRooms.length; i++)
+        for (int i = 0; i < arrayOrders.length; i++)
         {
-            arrayRooms[i] = null;
+            arrayOrders[i] = null;
         }
         int index = 0;
         try
         {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select ord_name, type from orders");
+            ResultSet resultSet = statement.executeQuery("select ord_name, ord_type from orders");
             while (resultSet.next())
             {
-                arrayRooms[index] = resultSet.getString("ord_name");
-                arrayRooms[index + 1] = resultSet.getString("type");
+                arrayOrders[index] = resultSet.getString("ord_name");
+                arrayOrders[index + 1] = resultSet.getString("ord_type");
                 index += 2;
             }
         }
@@ -139,7 +139,7 @@ public class ChangeOrder extends JFrame
     void  FillTableOnForm(DefaultTableModel model)
     {
         int index = 0, row = 0, column = 0;
-        while (arrayRooms[index] != null)
+        while (arrayOrders[index] != null)
         {
             if (index % 2 == 0)
             {
@@ -148,7 +148,7 @@ public class ChangeOrder extends JFrame
                 column = 0;
             }
 
-            model.setValueAt(arrayRooms[index], row, column);
+            model.setValueAt(arrayOrders[index], row, column);
             index++;
             column++;
         }
