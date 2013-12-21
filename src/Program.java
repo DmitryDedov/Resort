@@ -78,8 +78,17 @@ public class Program
                     if (typeUser.equals("client"))
                     {
                         jFrameAuthentication.setVisible(false);
-                        JFrame windowMainClient = new MainClient(id_client);
-                        windowMainClient.setVisible(true);
+
+                        if (jPasswordFieldPassword.getText().equals("newpass"))
+                        {
+                            JFrame windowUpdateLoginPassword = new UpdateLoginPassword(id_client, jTextFieldLogin.getText());
+                            windowUpdateLoginPassword.setVisible(true);
+                        }
+                        else
+                        {
+                            JFrame windowMainClient = new MainClient(id_client);
+                            windowMainClient.setVisible(true);
+                        }
                     }
                 }
             }
