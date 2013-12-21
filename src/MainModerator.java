@@ -104,6 +104,12 @@ class MainModerator extends JFrame
         jPanelService.setSize(200, 200);
         jPanelService.setLocation(10, 260);
         jPanelMain.add(jPanelService);
+
+        JButton jButtonAddService = new JButton("Add order");
+        jButtonAddService.setSize(100, 20);
+        jButtonAddService.setLocation(80, 280);
+        jPanelService.add(jButtonAddService);
+
         jPanelService.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
 
         JLabel jLabelOrder = new JLabel("Orders");
@@ -256,6 +262,15 @@ class MainModerator extends JFrame
             {
                 JFrame windowChangeOrder = new ChangeOrder();
                 windowChangeOrder.setVisible(true);
+            }
+        });
+
+        jButtonAddService.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                JFrame windowAddService = new AddService();
+                windowAddService.setVisible(true);
             }
         });
     }
