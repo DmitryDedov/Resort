@@ -99,6 +99,7 @@ public class ChangeOrder extends JFrame
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
+
     void GetValues(JTable jTable)
     {
         jTable.setColumnSelectionInterval(0, 1);

@@ -31,7 +31,7 @@
     <file path="/MainClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387525692690" ignored="false" />
     <file path="/FullEventForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387474274545" ignored="false" />
     <file path="/AddOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387646927714" ignored="false" />
-    <file path="/ChangeOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387528915502" ignored="false" />
+    <file path="/ChangeOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387654781124" ignored="false" />
     <file path="/AddService.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387610572874" ignored="false" />
     <file path="/ChangeService.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387635697463" ignored="false" />
     <file path="/UpdateLoginPassword.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387639567800" ignored="false" />
@@ -78,7 +78,22 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/AddOrderForClient.java" line="218" class="AddOrderForClient" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/ChangeOrderForClient.java" line="101" class="ChangeOrderForClient" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/ChangeOrderForClient.java" line="67" class="ChangeOrderForClient$2" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -162,10 +177,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddOrderForClient.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AddOrderForClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AddOrderForClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="39" selection-start="5891" selection-end="5891" vertical-scroll-proportion="-0.51842105">
+            <state line="218" column="0" selection-start="8031" selection-end="8031" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#3766#5315#0" expanded="true" />
                 <element signature="e#5304#5305#0" expanded="true" />
@@ -179,7 +194,7 @@
       <file leaf-file-name="ChangeOrder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ChangeOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="38" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.0">
+            <state line="87" column="0" selection-start="2670" selection-end="3163" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#2376#2600#0" expanded="true" />
                 <element signature="e#2589#2590#0" expanded="true" />
@@ -196,6 +211,20 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#2404#2628#0" expanded="true" />
                 <element signature="e#2617#2618#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeOrderForClient.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ChangeOrderForClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="0" selection-start="3058" selection-end="3058" vertical-scroll-proportion="0.33157894">
+              <folding>
+                <element signature="e#1986#2638#0" expanded="true" />
+                <element signature="e#2627#2628#0" expanded="true" />
+                <element signature="e#2857#3081#0" expanded="true" />
+                <element signature="e#3070#3071#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -253,20 +282,20 @@
       <list>
         <option value="$PROJECT_DIR$/src/q.form" />
         <option value="$PROJECT_DIR$/src/FullEventForClient.java" />
-        <option value="$PROJECT_DIR$/src/ChangeOrderForClient.java" />
         <option value="$PROJECT_DIR$/src/AddService.java" />
         <option value="$PROJECT_DIR$/src/AllClientsView.java" />
         <option value="$PROJECT_DIR$/src/MainModerator.java" />
         <option value="$PROJECT_DIR$/src/RegistrationClients.java" />
         <option value="$PROJECT_DIR$/src/AllEmptyRooms.java" />
         <option value="$PROJECT_DIR$/src/AddOrder.java" />
-        <option value="$PROJECT_DIR$/src/ChangeOrder.java" />
         <option value="$PROJECT_DIR$/src/ChangeService.java" />
         <option value="$PROJECT_DIR$/src/UpdateLoginPassword.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
         <option value="$PROJECT_DIR$/src/MainClient.java" />
         <option value="$PROJECT_DIR$/src/AddEvent.java" />
         <option value="$PROJECT_DIR$/src/AddOrderForClient.java" />
+        <option value="$PROJECT_DIR$/src/ChangeOrder.java" />
+        <option value="$PROJECT_DIR$/src/ChangeOrderForClient.java" />
       </list>
     </option>
   </component>
@@ -819,13 +848,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ChangeOrderForClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="28" selection-start="4448" selection-end="4448" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainModerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="58" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
@@ -913,6 +935,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="2746" selection-end="2989" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChangeOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="0" selection-start="2670" selection-end="3163" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2376#2600#0" expanded="true" />
+            <element signature="e#2589#2590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddOrderForClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="0" selection-start="8031" selection-end="8031" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#3766#5315#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5356#5889#0" expanded="true" />
+            <element signature="e#5878#5879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ChangeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="45" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
@@ -924,33 +977,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChangeOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/ChangeOrderForClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="38" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.0">
+        <state line="90" column="0" selection-start="3058" selection-end="3058" vertical-scroll-proportion="0.33157894">
           <folding>
-            <element signature="e#2376#2600#0" expanded="true" />
-            <element signature="e#2589#2590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="2746" selection-end="2989" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddOrderForClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="39" selection-start="5891" selection-end="5891" vertical-scroll-proportion="-0.51842105">
-          <folding>
-            <element signature="e#3766#5315#0" expanded="true" />
-            <element signature="e#5304#5305#0" expanded="true" />
-            <element signature="e#5356#5889#0" expanded="true" />
-            <element signature="e#5878#5879#0" expanded="true" />
+            <element signature="e#1986#2638#0" expanded="true" />
+            <element signature="e#2627#2628#0" expanded="true" />
+            <element signature="e#2857#3081#0" expanded="true" />
+            <element signature="e#3070#3071#0" expanded="true" />
           </folding>
         </state>
       </provider>

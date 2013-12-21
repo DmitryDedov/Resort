@@ -5,17 +5,19 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.*;
 
 public class ChangeOrderForClient extends JFrame
 {
     int id_client = 0;
-    int id_order = 0;
+    int id_clOrd = 0;
     final String[] name = new String[1];
     final String[] type = new String[1];
     final String[] date = new String[1];
     final String[] time = new String[1];
-    final String[] count = new String[1];
+    final int[] count = new int[1];
     final String[] status = new String[1];
 
     String[] arrayOrders = new String[100];
@@ -74,8 +76,38 @@ public class ChangeOrderForClient extends JFrame
             }
         });
 
+        JButton jButtonDelete = new JButton("Delete");
+        jButtonDelete.setLocation(700, 20);
+        jButtonDelete.setSize(100, 30);
+        jpanel.add(jButtonDelete);
+
+        jButtonDelete.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                Delete();
+                SelectAllOrders();
+                FillTableOnForm(model);
+            }
+        });
+
         setContentPane(jpanel);
         setSize(900, 300);
+    }
+
+    void Delete()
+    {
+        try
+        {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
+            Statement statement = connection.createStatement();
+
+            statement.executeUpdate("delete from client_order where id_co = " + id_clOrd);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 
     void GetValues(JTable jTable)
@@ -85,23 +117,24 @@ public class ChangeOrderForClient extends JFrame
         TableModel model = jTable.getModel();
         name[0] = model.getValueAt(selectedRow, 0).toString();
         type[0] = model.getValueAt(selectedRow, 1).toString();
-        date[0] = model.getValueAt(selectedRow, 1).toString();
-        time[0] = model.getValueAt(selectedRow, 1).toString();
-        count[0] = model.getValueAt(selectedRow, 1).toString();
-        status[0] = model.getValueAt(selectedRow, 1).toString();
-        GetIdEvent(name[0], type[0]);
+        date[0] = model.getValueAt(selectedRow, 2).toString();
+        time[0] = model.getValueAt(selectedRow, 3).toString();
+        count[0] = Integer.parseInt(model.getValueAt(selectedRow, 4).toString());
+        status[0] = model.getValueAt(selectedRow, 5).toString();
+        GetIdOrder(name[0], type[0], count[0]);
     }
 
-    void GetIdEvent(String name, String type)
+    void GetIdOrder(String name, String type, int count)
     {
         try
         {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select id_order from orders where ord_name = '" + name + "' and ord_type = '" + type + "'");
+            ResultSet resultSet = statement.executeQuery("select id_co from client_order where id_order in (select id_order from orders where ord_name = '"
+                    + name + "' and ord_type = '" + type + "') and id_client = " + id_client + " and count = " + count);
             if (resultSet.next())
             {
-                id_order = resultSet.getInt("id_order");
+                id_clOrd = resultSet.getInt("id_co");
             }
         }
         catch (SQLException e)
@@ -117,7 +150,7 @@ public class ChangeOrderForClient extends JFrame
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
             Statement statement = connection.createStatement();
 
-            statement.executeUpdate("update client_order set " + nameColumn + " ='" + updateValue + "' where id_event = " + id_order + " and id_client =" + id_client);
+            statement.executeUpdate("update client_order set " + nameColumn + " ='" + updateValue + "' where id_co = " + id_clOrd);
         }
         catch (SQLException e)
         {
