@@ -2,9 +2,13 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class AddOrderForClient extends JFrame
 {
+    String dateOrder = null;
     int id_order = 0;
     int id_client = 0;
     String[] arrayOrderName = new String[20];
@@ -48,20 +52,27 @@ public class AddOrderForClient extends JFrame
         jLabelOrderDate.setLocation(20, 130);
         jpanel.add(jLabelOrderDate);
 
-        final JTextField jTextFieldOrderDate = new JTextField();
-        jTextFieldOrderDate.setSize(100, 20);
-        jTextFieldOrderDate.setLocation(150, 130);
-        jpanel.add(jTextFieldOrderDate);
+        final JComboBox jComboBoxDate = new JComboBox();
+        jComboBoxDate.setSize(100, 20);
+        jComboBoxDate.setLocation(150, 130);
+        jComboBoxDate.addItem("today");
+        jComboBoxDate.addItem("tomorrow");
+        jpanel.add(jComboBoxDate);
 
         JLabel jLabelOrderTime = new JLabel("Time:");
         jLabelOrderTime.setSize(100, 20);
         jLabelOrderTime.setLocation(20, 170);
         jpanel.add(jLabelOrderTime);
 
-        final JTextField jTextFieldOrderTime = new JTextField();
-        jTextFieldOrderTime.setSize(100, 20);
-        jTextFieldOrderTime.setLocation(150, 170);
-        jpanel.add(jTextFieldOrderTime);
+        java.util.Date date = new java.util.Date();
+        final JSpinner jSpinner = new JSpinner();
+        SpinnerDateModel spinnerDateModel = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
+        jSpinner.setModel(spinnerDateModel);
+        JSpinner.DateEditor dateEditor = new JSpinner.DateEditor(jSpinner, "HH:mm");
+        jSpinner.setEditor(dateEditor);
+        jSpinner.setLocation(150, 170);
+        jSpinner.setSize(100, 20);
+        jpanel.add(jSpinner);
 
         JLabel jLabelOrderCount = new JLabel("Count:");
         jLabelOrderCount.setSize(100, 20);
@@ -81,7 +92,7 @@ public class AddOrderForClient extends JFrame
         jButtonAdd.setLocation(20, 250);
         jpanel.add(jButtonAdd);
 
-        ActionListener actionListener = new ActionListener()
+        jComboBoxOrderType.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
             {
@@ -91,15 +102,52 @@ public class AddOrderForClient extends JFrame
                 jComboBoxOrderName.removeAllItems();
                 FillOrderName(jComboBoxOrderName);
             }
-        };
-        jComboBoxOrderType.addActionListener(actionListener);
+        });
+
+        jComboBoxDate.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                JComboBox box = (JComboBox)e.getSource();
+                String date = (String)box.getSelectedItem();
+                if (date.equals("tomorrow"))
+                {
+                    java.util.Date time = null;
+                    try
+                    {
+                        time = new SimpleDateFormat("HH:mm").parse("00:01");
+                    }
+                    catch (ParseException e1)
+                    {
+                        e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    }
+                    SpinnerDateModel spinnerDateModel = new SpinnerDateModel(time, null, null, Calendar.HOUR_OF_DAY);
+                    jSpinner.setModel(spinnerDateModel);
+                    JSpinner.DateEditor dateEditor = new JSpinner.DateEditor(jSpinner, "HH:mm");
+                    jSpinner.setEditor(dateEditor);
+
+                    SimpleDateFormat FormattedDATE  = new SimpleDateFormat("yyyy-MM-dd");
+                    Calendar c = Calendar.getInstance();
+                    c.add(Calendar.DATE, 1);
+                    dateOrder = (String)(FormattedDATE.format(c.getTime()));
+                }
+                else
+                {
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    dateOrder = simpleDateFormat.format(new java.util.Date());
+                }
+            }
+        });
 
         jButtonAdd.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
             {
+                SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("HH:mm");
+                String time = simpleTimeFormat.format(jSpinner.getValue());
+
                 GetIdOrder(jComboBoxOrderType.getSelectedItem().toString(), jComboBoxOrderName.getSelectedItem().toString());
-                AddOrderOnBD(jTextFieldOrderDate.getText(), jTextFieldOrderTime.getText(), jComboBoxOrderCount.getSelectedItem().toString());
+                AddOrderOnBD(dateOrder, time, jComboBoxOrderCount.getSelectedItem().toString());
                 dispose();
             }
         });

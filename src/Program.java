@@ -36,7 +36,7 @@ public class Program
         jLabelLogin.setLocation(30, 60);
         jpanel.add(jLabelLogin);
 
-        final JTextField jTextFieldLogin = new JTextField("dds");
+        final JTextField jTextFieldLogin = new JTextField("q");
         jTextFieldLogin.setSize(100, 20);
         jTextFieldLogin.setLocation(150, 60);
         jpanel.add(jTextFieldLogin);
@@ -46,7 +46,7 @@ public class Program
         jLabelPassword.setLocation(30, 100);
         jpanel.add(jLabelPassword);
 
-        final JPasswordField jPasswordFieldPassword = new JPasswordField("dds");
+        final JPasswordField jPasswordFieldPassword = new JPasswordField("qqq");
         jPasswordFieldPassword.setSize(100, 20);
         jPasswordFieldPassword.setLocation(150, 100);
         jpanel.add(jPasswordFieldPassword);

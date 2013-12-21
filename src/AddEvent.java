@@ -11,7 +11,7 @@ public class AddEvent extends JFrame
 {
     AddEvent()
     {
-        super("Add evetn");
+        super("Add event");
         AddComponentsOnForm();
     }
 
@@ -77,7 +77,7 @@ public class AddEvent extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                SimpleDateFormat simpletimeFormat1 = new SimpleDateFormat("hh:mm");
+                SimpleDateFormat simpletimeFormat1 = new SimpleDateFormat("HH:mm");
                 String date = simpleDateFormat.format(jDateChooserDate.getDate());
                 String time = simpletimeFormat1.format(jSpinner.getValue());
 

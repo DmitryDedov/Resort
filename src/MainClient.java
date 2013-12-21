@@ -11,7 +11,7 @@ public class MainClient extends JFrame
     {
         super("Client");
         id_client = id_client_allien;
-        weather.GetWeather();
+        //weather.GetWeather();
         AddComponentOnForm();
     }
 
