@@ -1,15 +1,18 @@
 import com.toedter.calendar.JCalendar;
+import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 
 public class RegistrationClients extends JFrame
 {
     RegistrationClients()
     {
         super("Registration");
+
         AddComponentOnForm();
     }
 
@@ -59,10 +62,11 @@ public class RegistrationClients extends JFrame
         jLabelBirthday.setLocation(30, 170);
         jpanel.add(jLabelBirthday);
 
-        final JTextField jTextFieldBirthday = new JTextField();
-        jTextFieldBirthday.setSize(100, 20);
-        jTextFieldBirthday.setLocation(150, 170);
-        jpanel.add(jTextFieldBirthday);
+        final JDateChooser jDateChooserBirthday = new JDateChooser();
+        jDateChooserBirthday.setSize(100, 20);
+        jDateChooserBirthday.setLocation(150, 170);
+        jDateChooserBirthday.setDateFormatString("yyyy-MM-dd");
+        jpanel.add(jDateChooserBirthday);
 
         JLabel jLabelPassport = new JLabel("Input passport: ");
         jLabelPassport.setSize(150, 20);
@@ -104,30 +108,27 @@ public class RegistrationClients extends JFrame
         jTextFieldNumberRoom.setLocation(150, 330);
         jpanel.add(jTextFieldNumberRoom);
 
-//        JCalendar jCalendarDateIn = new JCalendar();
-//        jCalendarDateIn.setLocation(30, 370);
-//        jCalendarDateIn.setSize(200, 100);
-//        jpanel.add(jCalendarDateIn);
-
         JLabel jLabelDateIn = new JLabel("Input date in: ");
         jLabelDateIn.setSize(150, 20);
         jLabelDateIn.setLocation(30, 370);
         jpanel.add(jLabelDateIn);
 
-        final JTextField jTextFieldDateIn = new JTextField();
-        jTextFieldDateIn.setSize(100, 20);
-        jTextFieldDateIn.setLocation(150, 370);
-        jpanel.add(jTextFieldDateIn);
+        final JDateChooser jDateChooserDateIn = new JDateChooser();
+        jDateChooserDateIn.setSize(100, 20);
+        jDateChooserDateIn.setLocation(150, 370);
+        jDateChooserDateIn.setDateFormatString("yyyy-MM-dd");
+        jpanel.add(jDateChooserDateIn);
 
         JLabel jLabelDateOut = new JLabel("Input date out: ");
         jLabelDateOut.setSize(150, 20);
         jLabelDateOut.setLocation(30, 410);
         jpanel.add(jLabelDateOut);
 
-        final JTextField jTextFieldDateOut = new JTextField();
-        jTextFieldDateOut.setSize(100, 20);
-        jTextFieldDateOut.setLocation(150, 410);
-        jpanel.add(jTextFieldDateOut);
+        final JDateChooser jDateChooserDateOut = new JDateChooser();
+        jDateChooserDateOut.setSize(100, 20);
+        jDateChooserDateOut.setLocation(150, 410);
+        jDateChooserDateOut.setDateFormatString("yyyy-MM-dd");
+        jpanel.add(jDateChooserDateOut);
 
         JButton jButtonRegistration = new JButton("Registration");
         jButtonRegistration.setSize(100, 20);
@@ -142,17 +143,22 @@ public class RegistrationClients extends JFrame
             public void actionPerformed(ActionEvent e)
             {
                 if ((jTextFieldSurname.getText().equals("")) || (jTextFieldName.getText().equals("")) || (jTextFieldMiddlename.getText().equals(""))
-                        || (jTextFieldBirthday.getText().equals("")) || (jTextFieldPassport.getText().equals("")) || (jTextFieldEmail.getText().equals("")) ||
-                        (jTextFieldNameHotel.getText().equals("")) || (jTextFieldNumberRoom.getText().equals("")) || (jTextFieldDateIn.getText().equals("")) ||
-                        (jTextFieldDateOut.getText().equals("")))
+                        || (jDateChooserBirthday.getDate().equals("")) || (jTextFieldPassport.getText().equals("")) || (jTextFieldEmail.getText().equals("")) ||
+                        (jTextFieldNameHotel.getText().equals("")) || (jTextFieldNumberRoom.getText().equals("")) || (jDateChooserDateIn.getDate().equals("")) ||
+                        (jDateChooserDateOut.getDate().equals("")))
                 {
                     JOptionPane.showMessageDialog(null, "Input data correct!");
                 }
                 else
                 {
-                    if (RegistrationClient(jTextFieldSurname.getText(), jTextFieldName.getText(), jTextFieldMiddlename.getText(), jTextFieldBirthday.getText(),
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    String dateBirthday = simpleDateFormat.format(jDateChooserBirthday.getDate());
+                    String dateIn = simpleDateFormat.format(jDateChooserDateIn.getDate());
+                    String dateOut = simpleDateFormat.format(jDateChooserDateOut.getDate());
+
+                    if (RegistrationClient(jTextFieldSurname.getText(), jTextFieldName.getText(), jTextFieldMiddlename.getText(), dateBirthday,
                             jTextFieldPassport.getText(), jTextFieldEmail.getText(), jTextFieldNameHotel.getText(), jTextFieldNumberRoom.getText(),
-                            jTextFieldDateIn.getText(), jTextFieldDateOut.getText()))
+                            dateIn, dateOut))
                     {
                         JOptionPane.showMessageDialog(null, "You have successfully registered!");
                         dispose();
@@ -187,7 +193,6 @@ public class RegistrationClients extends JFrame
             if (resultSet.next())
             {
                 id_room = resultSet.getInt("id_room");
-//                JOptionPane.showMessageDialog(null, "id_room" + id_room);
             }
 
             statement.executeUpdate("insert into DateIn_Out (id_room, id_client, Date_in, Date_out) values (" + id_room + "," + lastIDClient +

@@ -11,6 +11,16 @@ import java.sql.*;
 
 public class AllClientsView extends JFrame
 {
+    private JTable jTable;
+
+    public JTable getjTable() {
+        return jTable;
+    }
+
+    public void setjTable(JTable jTable) {
+        this.jTable = jTable;
+    }
+
     int id_client = 0;
     final String[] surname = new String[1];
     final String[] name = new String[1];
