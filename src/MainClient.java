@@ -78,6 +78,12 @@ public class MainClient extends JFrame
         jPanelService.setSize(200, 200);
         jPanelService.setLocation(10, 260);
         jPanelMain.add(jPanelService);
+
+        JButton jButtonAddService = new JButton("Add service");
+        jButtonAddService.setSize(100, 20);
+        jButtonAddService.setLocation(10, 280);
+        jPanelService.add(jButtonAddService);
+
         jPanelService.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
 
         JLabel jLabelOrder = new JLabel("Orders");
@@ -134,6 +140,15 @@ public class MainClient extends JFrame
             {
                 JFrame windowChangeOrder = new ChangeOrderForClient(id_client);
                 windowChangeOrder.setVisible(true);
+            }
+        });
+
+        jButtonAddService.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                JFrame windowAddService = new AddServiceForClient(id_client);
+                windowAddService.setVisible(true);
             }
         });
     }
