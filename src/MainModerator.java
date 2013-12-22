@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.*;
 
 class MainModerator extends JFrame
 {
@@ -136,6 +137,16 @@ class MainModerator extends JFrame
         jButtonChangeOrder.setSize(100, 20);
         jButtonChangeOrder.setLocation(310, 280);
         jPanelOrder.add(jButtonChangeOrder);
+
+        JLabel jLabelStatus = new JLabel();
+        jLabelStatus.setSize(100, 20);
+        jLabelStatus.setLocation(310, 320);
+        jPanelOrder.add(jLabelStatus);
+
+        JButton jButtonStatus = new JButton("status");
+        jButtonStatus.setSize(100, 20);
+        jButtonStatus.setLocation(310, 360);
+        jPanelOrder.add(jButtonStatus);
 
         jPanelOrder.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
 
@@ -287,5 +298,24 @@ class MainModerator extends JFrame
                 windowChangeService.setVisible(true);
             }
         });
+    }
+
+    void NotConfirmedOrder()
+    {
+        try
+        {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resort", "root", "12345");
+            Statement statement = connection.createStatement();
+
+            ResultSet resultSet = statement.executeQuery("select count(id_co) from client_order where status = 0");
+            while (resultSet.next())
+            {
+                int count_ord = resultSet.getInt("count(id_co)");
+            }
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 }

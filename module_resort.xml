@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_resort" default="compile.module.resort">
+  <dirname property="module.resort.basedir" file="${ant.file.module_resort}"/>
+  
+  <property name="module.jdk.home.resort" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.resort" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.resort" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.resort" value="${compiler.args}"/>
+  
+  <property name="resort.output.dir" value="${module.resort.basedir}/out/production/Resort"/>
+  <property name="resort.testoutput.dir" value="${module.resort.basedir}/out/test/Resort"/>
+  
+  <path id="resort.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="resort.module.production.classpath">
+    <path refid="${module.jdk.classpath.resort}"/>
+    <path refid="library.jdom.classpath"/>
+    <path refid="library.jdatepicker-1.3.2.classpath"/>
+    <path refid="library.mysql:mysql-connector-java:5.1.27.classpath"/>
+    <pathelement location="${basedir}/lib/jackson-mapper-asl-1.0.0.jar"/>
+    <path refid="library.jax-rs-jersey-1.12.classpath"/>
+    <path refid="library.junit:junit:4.9.classpath"/>
+    <path refid="library.com.toedter:jcalendar:1.4.classpath"/>
+  </path>
+  
+  <path id="resort.runtime.production.module.classpath">
+    <pathelement location="${resort.output.dir}"/>
+    <path refid="library.jdom.classpath"/>
+    <path refid="library.jdatepicker-1.3.2.classpath"/>
+    <path refid="library.mysql:mysql-connector-java:5.1.27.classpath"/>
+    <pathelement location="${basedir}/lib/jackson-mapper-asl-1.0.0.jar"/>
+    <path refid="library.jax-rs-jersey-1.12.classpath"/>
+    <path refid="library.junit:junit:4.9.classpath"/>
+    <path refid="library.com.toedter:jcalendar:1.4.classpath"/>
+  </path>
+  
+  <path id="resort.module.classpath">
+    <path refid="${module.jdk.classpath.resort}"/>
+    <pathelement location="${resort.output.dir}"/>
+    <path refid="library.jdom.classpath"/>
+    <path refid="library.jdatepicker-1.3.2.classpath"/>
+    <path refid="library.mysql:mysql-connector-java:5.1.27.classpath"/>
+    <pathelement location="${basedir}/lib/jackson-mapper-asl-1.0.0.jar"/>
+    <path refid="library.jax-rs-jersey-1.12.classpath"/>
+    <path refid="library.junit:junit:4.9.classpath"/>
+    <path refid="library.com.toedter:jcalendar:1.4.classpath"/>
+  </path>
+  
+  <path id="resort.runtime.module.classpath">
+    <pathelement location="${resort.testoutput.dir}"/>
+    <pathelement location="${resort.output.dir}"/>
+    <path refid="library.jdom.classpath"/>
+    <path refid="library.jdatepicker-1.3.2.classpath"/>
+    <path refid="library.mysql:mysql-connector-java:5.1.27.classpath"/>
+    <pathelement location="${basedir}/lib/jackson-mapper-asl-1.0.0.jar"/>
+    <path refid="library.jax-rs-jersey-1.12.classpath"/>
+    <path refid="library.junit:junit:4.9.classpath"/>
+    <path refid="library.com.toedter:jcalendar:1.4.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.resort">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.resort">
+    <patternset refid="excluded.from.module.resort"/>
+  </patternset>
+  
+  <path id="resort.module.sourcepath">
+    <dirset dir="${module.resort.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.resort" depends="compile.module.resort.production,compile.module.resort.tests" description="Compile module Resort"/>
+  
+  <target name="compile.module.resort.production" depends="register.custom.compilers" description="Compile module Resort; production classes">
+    <mkdir dir="${resort.output.dir}"/>
+    <javac2 destdir="${resort.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.resort}/javac">
+      <compilerarg line="${compiler.args.resort}"/>
+      <bootclasspath refid="resort.module.bootclasspath"/>
+      <classpath refid="resort.module.production.classpath"/>
+      <src refid="resort.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.resort"/>
+    </javac2>
+    
+    <copy todir="${resort.output.dir}">
+      <fileset dir="${module.resort.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.resort.tests" depends="register.custom.compilers,compile.module.resort.production" description="compile module Resort; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.resort" description="cleanup module">
+    <delete dir="${resort.output.dir}"/>
+    <delete dir="${resort.testoutput.dir}"/>
+  </target>
+</project>
