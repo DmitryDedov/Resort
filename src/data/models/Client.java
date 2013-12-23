@@ -1,5 +1,4 @@
 package data.models;
-
 import org.codehaus.jackson.map.ObjectMapper;
 import data.JSONMarshallObject;
 

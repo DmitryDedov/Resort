@@ -1,4 +1,5 @@
 import data.models.Moderator;
+import junit.framework.Assert;
 import org.junit.Test;
 import data.models.Client;
 
@@ -86,7 +87,12 @@ public class ClientTest {
         //System.out.println(response.toString());
         return response.toString();
     }
-
+    @Test
+    public void TestAuth()
+    {
+        Auth auth = new Auth();
+        Assert.assertTrue(auth.Authentication("dds", "dds") == "moderator");
+    }
 
 
 }

@@ -125,7 +125,7 @@ public class MainClient extends JFrame
         {
             public void actionPerformed(ActionEvent e)
             {
-                Program.jFrameAuthentication.setVisible(true);
+                Auth.jFrameAuthentication.setVisible(true);
                 dispose();
             }
         });

@@ -4,15 +4,15 @@
     <list default="true" id="4add0879-5a10-460a-a77f-d0287474572e" name="Default" comment="" />
     <ignored path="Resort.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Program.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387639853952" ignored="false" />
-    <file path="/fragment.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387646749374" ignored="false" />
+    <file path="/Program.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387785005299" ignored="false" />
+    <file path="/fragment.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387785173129" ignored="false" />
     <file path="/Registration.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385924111575" ignored="false" />
-    <file path="/MainModerator.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387728172794" ignored="false" />
+    <file path="/MainModerator.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387785066506" ignored="false" />
     <file path="/Weather.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1383834235340" ignored="false" />
     <file path="/RegistrationClients.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387629046026" ignored="false" />
-    <file path="/Client.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385479925786" ignored="false" />
+    <file path="/Client.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387785332561" ignored="false" />
     <file path="/SelectRoom.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1384166470823" ignored="false" />
-    <file path="/ClientTest.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385662984879" ignored="false" />
+    <file path="/ClientTest.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387785529573" ignored="false" />
     <file path="/Dummy.txt" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387548065157" ignored="false" />
     <file path="$PROJECT_DIR$/../Server for resort manager/WebService/src/resortmanager/webservice/dal/ConnectionSingleton.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1385479435621" ignored="false" />
     <file path="$PROJECT_DIR$/../Server for resort manager/WebService/src/resortmanager/webservice/service/handlers/ClientsHandler.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387485291052" ignored="false" />
@@ -28,7 +28,7 @@
     <file path="/ChangeEvent.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387112041350" ignored="false" />
     <file path="/AddOrder.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387634902969" ignored="false" />
     <file path="/ChangeOrder.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387635450937" ignored="false" />
-    <file path="/MainClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387724254500" ignored="false" />
+    <file path="/MainClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387785055598" ignored="false" />
     <file path="/FullEventForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387474274545" ignored="false" />
     <file path="/AddOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387646927714" ignored="false" />
     <file path="/ChangeOrderForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387654781124" ignored="false" />
@@ -37,6 +37,8 @@
     <file path="/UpdateLoginPassword.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387639567800" ignored="false" />
     <file path="/AddServiceForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387723794562" ignored="false" />
     <file path="/ChangeServiceForClient.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387726143930" ignored="false" />
+    <file path="/tests.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387785277719" ignored="false" />
+    <file path="/Auth.java" changelist="4add0879-5a10-460a-a77f-d0287474572e" time="1387785478196" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/ClientTest.java" line="54" class="ClientTest" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/ClientTest.java" line="55" class="ClientTest" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -152,52 +154,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChangeOrderForClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChangeOrderForClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="205" column="5" selection-start="7414" selection-end="7414" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1986#2638#0" expanded="true" />
-                <element signature="e#2627#2628#0" expanded="true" />
-                <element signature="e#2857#3081#0" expanded="true" />
-                <element signature="e#3070#3071#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddServiceForClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AddServiceForClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="44" selection-start="2433" selection-end="2433" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2472#3079#0" expanded="true" />
-                <element signature="e#3068#3069#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChangeServiceForClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChangeServiceForClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="51" selection-start="3900" selection-end="3900" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1832#2460#0" expanded="true" />
-                <element signature="e#2449#2450#0" expanded="true" />
-                <element signature="e#2679#2903#0" expanded="true" />
-                <element signature="e#2892#2893#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainModerator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainModerator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainModerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="312" column="64" selection-start="11108" selection-end="11108" vertical-scroll-proportion="0.870229">
+            <state line="200" column="35" selection-start="7510" selection-end="7510" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -206,8 +166,54 @@
       <file leaf-file-name="AllClientsView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AllClientsView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="251" column="73" selection-start="10843" selection-end="10843" vertical-scroll-proportion="0.0">
+            <state line="245" column="42" selection-start="10291" selection-end="10291" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/test/tests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="24" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Auth.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Auth.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="93" column="10" selection-start="3419" selection-end="3419" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1866#3399#0" expanded="true" />
+                <element signature="e#3388#3389#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/models/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ClientTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="66" selection-start="2805" selection-end="2805" vertical-scroll-proportion="0.82894737">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -215,7 +221,7 @@
       <file leaf-file-name="MainClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="71" selection-start="5877" selection-end="5877" vertical-scroll-proportion="0.0">
+            <state line="127" column="20" selection-start="4666" selection-end="4666" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -224,8 +230,10 @@
       <file leaf-file-name="Program.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="77" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="10" column="0" selection-start="189" selection-end="260" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -240,22 +248,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/AddService.java" />
-        <option value="$PROJECT_DIR$/src/AllClientsView.java" />
-        <option value="$PROJECT_DIR$/src/RegistrationClients.java" />
-        <option value="$PROJECT_DIR$/src/AllEmptyRooms.java" />
-        <option value="$PROJECT_DIR$/src/AddOrder.java" />
         <option value="$PROJECT_DIR$/src/ChangeService.java" />
         <option value="$PROJECT_DIR$/src/UpdateLoginPassword.java" />
         <option value="$PROJECT_DIR$/src/AddEvent.java" />
         <option value="$PROJECT_DIR$/src/ChangeOrder.java" />
         <option value="$PROJECT_DIR$/src/AddOrderForClient.java" />
         <option value="$PROJECT_DIR$/src/AddServiceForClient.java" />
-        <option value="$PROJECT_DIR$/src/MainClient.java" />
         <option value="$PROJECT_DIR$/src/ChangeOrderForClient.java" />
         <option value="$PROJECT_DIR$/src/ChangeServiceForClient.java" />
+        <option value="$PROJECT_DIR$/Test/Test.java" />
         <option value="$PROJECT_DIR$/src/Program.java" />
+        <option value="$PROJECT_DIR$/src/MainClient.java" />
         <option value="$PROJECT_DIR$/src/MainModerator.java" />
+        <option value="$PROJECT_DIR$/src/data/models/Client.java" />
+        <option value="$PROJECT_DIR$/src/Auth.java" />
+        <option value="$PROJECT_DIR$/Test/test/tests.java" />
+        <option value="$PROJECT_DIR$/src/ClientTest.java" />
       </list>
     </option>
   </component>
@@ -329,7 +337,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,32 +356,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resort" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resort" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,7 +366,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -410,34 +396,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Program">
-    <configuration default="false" name="ClientTest.TestUnmarshall" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Resort" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ClientTest" />
-      <option name="METHOD_NAME" value="TestUnmarshall" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ClientTest.TestAuth">
     <configuration default="false" name="ClientTest.TestRegistration" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Resort" />
@@ -446,33 +405,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ClientTest" />
       <option name="METHOD_NAME" value="TestRegistration" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ClientTest.TestRegistrationModer" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Resort" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ClientTest" />
-      <option name="METHOD_NAME" value="TestRegistrationModer" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -542,6 +474,65 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="tests" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Resort" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.tests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClientTest.TestAuth" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Resort" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ClientTest" />
+      <option name="METHOD_NAME" value="TestAuth" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -642,19 +633,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ClientTest.TestUnmarshall" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ClientTest.TestRegistration" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ClientTest.TestRegistrationModer" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ClientTest.TestModer" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Program" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ClientTest.TestRegistration" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ClientTest.TestModer" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Program" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.tests" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ClientTest.TestAuth" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Program" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ClientTest.TestRegistration" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ClientTest.TestModer" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ClientTest.TestRegistrationModer" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ClientTest.TestUnmarshall" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ClientTest.TestAuth" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Program" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.tests" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ClientTest.TestRegistration" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ClientTest.TestModer" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -720,9 +711,10 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.73657715" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21472393" sideWeight="0.65" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.70302016" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.73657715" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26174498" sideWeight="0.81363636" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26174498" sideWeight="0.81363636" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26174498" sideWeight="0.18636364" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -742,7 +734,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -815,43 +806,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ChangeEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="36" selection-start="734" selection-end="734" vertical-scroll-proportion="0.060526315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="2746" selection-end="2989" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChangeOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="2670" selection-end="3163" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2376#2600#0" expanded="true" />
-            <element signature="e#2589#2590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChangeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="45" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2404#2628#0" expanded="true" />
-            <element signature="e#2617#2618#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="6" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
@@ -889,20 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="71" selection-start="5877" selection-end="5877" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AllClientsView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="73" selection-start="10843" selection-end="10843" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ChangeServiceForClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="51" selection-start="3900" selection-end="3900" vertical-scroll-proportion="0.0">
@@ -913,13 +853,6 @@
             <element signature="e#2679#2903#0" expanded="true" />
             <element signature="e#2892#2893#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="77" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,10 +884,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllClientsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="245" column="42" selection-start="10291" selection-end="10291" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="20" selection-start="4666" selection-end="4666" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainModerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="64" selection-start="11108" selection-end="11108" vertical-scroll-proportion="0.870229">
+        <state line="200" column="35" selection-start="7510" selection-end="7510" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/models/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="189" selection-end="260" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Auth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="10" selection-start="3419" selection-end="3419" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1866#3399#0" expanded="true" />
+            <element signature="e#3388#3389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/test/tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="24" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="66" selection-start="2805" selection-end="2805" vertical-scroll-proportion="0.82894737">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
